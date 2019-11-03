@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         while (true) {
             TicketController controller = new TicketController();
-            controller.choiceMode();
+            controller.run();
             if(!controller.shouldContinue())
                 break;
         }

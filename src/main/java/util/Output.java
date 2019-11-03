@@ -1,11 +1,12 @@
 package util;
 
 public class Output {
+
     public void description() {
-        System.out.println("Please choice  mode:\n 1) Moscow\n 2) Piter\n -----------------------");
+        System.out.println("Please choice  mode:\n 1) Moscow\n 2) Peter\n -----------------------");
     }
 
-    public void wrongChoice() {
+    public void nonexistentChoice() {
         System.out.println("You select nonexistent mode. Please enter y - yes, if you want to try again ");
     }
 
@@ -27,5 +28,9 @@ public class Output {
 
     public void luckyTicket(int count, String method) {
         System.out.println("We have " + count + " lucky tickets by " + method + " method");
+    }
+
+    public void fileReadError() {
+        System.out.println("Error with reading from file");
     }
 }

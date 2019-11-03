@@ -3,6 +3,7 @@ package util;
 import java.io.File;
 
 public class Validator {
+
     public boolean fileExist(File file) {
         if(file.exists() && file.isFile())
             return true;
@@ -23,8 +24,12 @@ public class Validator {
         return content;
     }
 
+    public String mode(String str) {
+       return str.replaceAll("\\s+", "").toUpperCase();
+    }
+
     public boolean continueRequest(String answer) {
-        answer = answer.toUpperCase();
+        answer = answer.replaceAll("\\s+","").toUpperCase();
         if(answer.equals("Y") || answer.equals("YES"))
             return true;
         else
